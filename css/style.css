@@ -1,3 +1,7 @@
+:root {
+    --font-color-secondary: #666666;
+    --border-color: #E0E0E0;
+}
 *{
     box-sizing: border-box;
 }
@@ -31,7 +35,7 @@ h3 {
 }
 p {
     font-size: 1rem;
-    color: #666666;
+    color: var(--font-color-seconday);
     line-height: 1.2;
 }
 
@@ -103,4 +107,51 @@ p {
     font-size: 1rem;
     color: #666666;
 
+}
+
+/* BEM Tables */
+.table {
+    margin-top: 1rem;
+}
+.table__table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: left;
+}
+.table__thead {
+    color: var(--font-color-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+    padding: 1.5rem 2rem;
+    width: 25%;
+    max-width: 25%;
+}
+
+.icon-button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+.icon-button__icon{
+    width: 100%;
+    height: auto;
+}
+
+/* Utilities */
+.align-right{
+    text-align: right;
+}
+
+.table .custom-th{
+    padding-left: 8.5rem;
+}
+
+.text-secondary{
+    color: var(--font-color-secondary);
 }
