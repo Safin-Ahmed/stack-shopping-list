@@ -1,6 +1,9 @@
 :root {
     --font-color-secondary: #666666;
     --border-color: #E0E0E0;
+    --completed-table-color: #4A8D47;
+    --completed-table-cell-color: #f2fde4;
+    --table-stripped-color-success: #eafdd0;
 }
 *{
     box-sizing: border-box;
@@ -13,6 +16,7 @@ body{
     font-size: 1rem;
     color: #424242;
     background-color: #f5f5f5;
+    padding-bottom: 5rem;
 }
 
 h1, 
@@ -123,12 +127,25 @@ p {
     color: var(--font-color-secondary);
     border-bottom: 1px solid var(--border-color);
 }
-
 .table th {
     padding: 1.5rem 2rem;
     width: 25%;
     max-width: 25%;
 }
+.table__item-input {
+    color: var(--font-color-secondary);
+}
+.table--success .table__thead {
+    background-color: var(--completed-table-color);
+    color: #fff;
+}
+.table--success .table__tbody {
+    background-color: var(--completed-table-cell-color);
+}
+.table--success .table__tbody tr:nth-child(even) {
+    background-color: var(--table-stripped-color-success);
+}
+
 
 .icon-button{
     border: none;
